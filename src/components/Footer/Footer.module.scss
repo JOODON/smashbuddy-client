@@ -1,0 +1,41 @@
+footer {
+  background-color: #5AB2FF; /* 배경색 */
+  padding: 20px 0; /* 상하 여백 */
+  color: #000000; /* 텍스트 색상 */
+}
+
+.footerContainer {
+  display: flex;
+  justify-content: space-around; /* 아이템들 간격을 고르게 배치 */
+  align-items: center;
+  width: 100%;
+}
+.footerItem {
+  display: flex;
+  flex-direction: column; /* 아이콘과 텍스트를 수직으로 배치 */
+  align-items: center; /* 수평 중앙 정렬 */
+  justify-content: center; /* 수직 중앙 정렬 */
+  text-align: center; /* 텍스트 정렬 */
+}
+.footerItem img {
+  width: 40px; /* 아이콘 크기 */
+  height: 40px;
+  object-fit: contain; /* 이미지 비율 유지 */
+  transition: transform 0.3s ease;
+  margin-bottom: 4px; /* 아이콘과 텍스트 간 간격 */
+}
+
+.footerItem p {
+  font-size: 14px; /* 텍스트 크기 */
+  color: #ccc; /* 텍스트 색상 */
+}
+
+.footerItem img:hover {
+  transform: scale(1.2); /* 호버시 크기 확대 */
+}
+
+.footerItem p {
+  margin-top: 8px; /* 아이콘과 텍스트 간 간격 */
+  font-size: 14px; /* 텍스트 크기 */
+  color: #ccc; /* 텍스트 색상 */
+}

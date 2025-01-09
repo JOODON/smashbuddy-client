@@ -1,15 +1,18 @@
 import React from 'react';
+import styles from './Header.module.scss';  // CSS 모듈 import
 
 const Header = () => {
     return (
-        <header className="header">
-            <nav className="nav">
-                <ul className="nav-list">
-                    <li className="logo">Smash Buddy</li>
-                    <li className="nav-item"><a href="#upload-video">Upload Video</a></li>
-                    <li className="nav-item"><a href="#tournaments">Tournaments</a></li>
-                    <li className="nav-item"><a href="#clubs">Clubs & Exercises</a></li>
-                    <li className="nav-item"><a href="#shop">Shop</a></li>
+        <header className={styles.header}>
+            <div className={styles.logoWrapper}>
+                <span className={styles.logo}>Smash Buddy</span>
+            </div>
+            <nav>
+                <ul className={styles.navList}>
+                    <li className={styles.navItem}><a href="#upload-video">Upload Video</a></li>
+                    <li className={styles.navItem}><a href="#tournaments">Tournaments</a></li>
+                    <li className={styles.navItem}><a href="#clubs">Clubs & Exercises</a></li>
+                    <li className={styles.navItem}><a href="#shop">Shop</a></li>
                 </ul>
             </nav>
         </header>
