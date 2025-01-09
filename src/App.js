@@ -1,6 +1,7 @@
 import './styles/global.css';
 import React, { useEffect } from "react";
 import Footer from "./components/Footer/Footer";
+import Header from "./components/Header/Header";
 
 function App() {
     useEffect(() => {
@@ -13,6 +14,7 @@ function App() {
 
     return (
         <div className="app-container">
+            <Header />
             <Footer/>
         </div>
     );

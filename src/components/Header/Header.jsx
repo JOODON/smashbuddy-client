@@ -1,22 +1,20 @@
 import React from 'react';
 import styles from './Header.module.scss';  // CSS 모듈 import
+import setting from '../../assets/icon/setting.png';
+import logo from '../../assets/icon/logo.png';
 
-const Header = () => {
+function Header() {
     return (
         <header className={styles.header}>
-            <div className={styles.logoWrapper}>
-                <span className={styles.logo}>Smash Buddy</span>
+            <div className={styles.logo}>
+                <img src={logo} className={styles.logo} alt="setting"/>
             </div>
-            <nav>
-                <ul className={styles.navList}>
-                    <li className={styles.navItem}><a href="#upload-video">Upload Video</a></li>
-                    <li className={styles.navItem}><a href="#tournaments">Tournaments</a></li>
-                    <li className={styles.navItem}><a href="#clubs">Clubs & Exercises</a></li>
-                    <li className={styles.navItem}><a href="#shop">Shop</a></li>
-                </ul>
-            </nav>
+
+            <div className={styles.userSettings}>
+                <img src={setting} className={styles.userSettingsIcon} alt="setting"/>
+            </div>
         </header>
     );
-};
+}
 
 export default Header;

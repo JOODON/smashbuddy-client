@@ -1,61 +1,33 @@
-/* Header.module.scss */
 .header {
-
-    padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* 좌측과 우측에 공간을 나눔 */
-    align-items: center; /* 수직 중앙 정렬 */
-}
-
-.logoWrapper {
-    flex: 1; /* 왼쪽에 로고를 고정 */
+    justify-content: space-between; /* 좌측 로고, 우측 아이콘 */
+    align-items: center;
+    padding: 10px 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 45px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    width: 60px; /* 아이콘 크기 줄이기 */
+    height:60px;
+    object-fit: contain; /* 이미지 비율 유지 */
+    transition: transform 0.3s ease;
 }
 
-.navList {
+.userSettings {
     display: flex;
-    justify-content: space-between;
-    list-style: none;
-    margin: 0;
+    align-items: center;
 }
 
-.navItem a {
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: bold;
-    color: #1abc9c; /* 배드민턴 코트 연상하는 색상 (녹색 계열) */
-    padding: 10px;
-    transition: background-color 0.3s, color 0.3s; /* 부드러운 색상 전환 */
-}
-.navItem a:hover {
-    background-color: #16a085; /* 호버 시 색상 (약간 어두운 녹색) */
-    color: white; /* 호버 시 텍스트 색상 흰색 */
+.userSettingsIcon {
+    width: 32px; /* 아이콘 크기 줄이기 */
+    height: 32px;
+    object-fit: contain; /* 이미지 비율 유지 */
+    transition: transform 0.3s ease;
+    margin-bottom: 4px; /* 아이콘과 텍스트 간 간격 */
 }
 
-.navItem a:active {
-    background-color: white; /* 클릭 시 배경을 흰색으로 */
-    color: #1abc9c; /* 클릭 시 텍스트 색상 배드민턴 바닥 색상 */
-}
-
-/* 반응형 디자인: 작은 화면에서 메뉴를 세로로 쌓기 */
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-    }
-
-    .navList {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 20%;
-    }
-
-    .navItem {
-        text-align: right;
-        padding: 10px;
-        width: 100%;
-    }
+.userSettingsIcon:hover {
+    transform: scale(1.1); /* 아이콘 클릭 시 크기 확대 */
 }
