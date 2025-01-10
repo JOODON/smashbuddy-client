@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  gap: 20px; /* 섹션 간 간격 */
+  padding: 20px;
+  background-color: #f4f4f4; /* 배경색 */
+  overflow: auto; /* 스크롤 자동 활성화 */
+  height: 100%;
+}
+
+.section {
+  display: flex;
+  flex-direction: column; /* 수직 정렬 */
+  gap: 10px;
+  padding: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.sectionHorizontal {
+  display: flex;
+  gap: 10px; /* 아이템 간 간격 */
+  max-width: 100%; /* 섹션 너비 제한 */
+}
+
+.bestItemWrapper {
+  display: flex; /* 가로로 배치 */
+  gap: 20px; /* 이미지와 설명 사이 간격 */
+  justify-content: center; /* 가로로 가운데 정렬 */
+  align-items: center; /* 세로로 가운데 정렬 */
+}
+
+.bestItemImg img {
+  width: 100%; /* 이미지 너비를 부모에 맞춤 */
+  max-width: 120px; /* 최대 크기 제한 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 */
+}
+
+.bestItemDescription p {
+  margin: 5px 0; /* 각 텍스트 간격 */
+  font-size: 14px; /* 텍스트 크기 */
+  color: #333; /* 텍스트 색상 */
+  text-align: left; /* 텍스트 왼쪽 정렬 */
+}
+
+.bestItem h2 ,
+.bestVideo h2
+{
+  margin-bottom: 10px; /* 제목과 내용 간격 */
+  font-size: 18px;
+  background: #e8f4ff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  color: #00A3FF;
+}
+.groupSession{
+  flex: 1; /* 동일한 크기로 배치 */
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* 전체 배경 */
+  height: 300px;
+  overflow: auto; /* 스크롤 자동 활성화 */
+}
+.tournamentSession {
+  flex: 1; /* 동일한 크기로 배치 */
+  padding: 10px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9; /* 전체 배경 */
+  height: 300px;
+  overflow: auto; /* 스크롤 자동 활성화 */
+}
+
+.groupSession h2,
+.tournamentSession h2 {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #e8f4ff; /* 개별 섹션 배경색 */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.groupSession p,
+.tournamentSession p {
+  padding: 10px;
+  font-size: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+h2 {
+  margin: 0;
+  font-size: 18px;
+  color: #00A3FF;
+}
