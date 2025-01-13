@@ -1,8 +1,8 @@
 import React from 'react';
-import styles from './Body.module.scss';  // CSS 모듈 import
+import styles from './Main.module.scss';  // CSS 모듈 import
 
 
-const Body = () => {
+const Main = () => {
     return (
         <main className={styles.container}>
             <div className={styles.section}>
@@ -59,4 +59,4 @@ const Body = () => {
     );
 };
 
-export default Body;
+export default Main;

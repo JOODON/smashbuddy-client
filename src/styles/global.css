@@ -2,7 +2,6 @@
 @font-face {
     font-family: 'toss-font';
     src: url('/assets/fonts/BMJUA_otf.otf'); /* EOT 폰트 파일 */
-    src: url('/assets/fonts/BMJUA_otf.otf'); /* EOT 폰트 파일 */
     font-weight: normal;
     font-style: normal;
 }
@@ -25,11 +24,16 @@ html, body {
 }
 
 .app-container {
-    width: calc(var(--vw) * 100);  /* --vw 변수로 너비 설정 */
-    height: calc(var(--vh) * 100); /* --vh 변수로 높이 설정 */
+    width: 100vw;  /* 100% 뷰포트 너비 */
+    height: 100vh; /* 100% 뷰포트 높이 */
     background-color: white;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
     border-radius: 15px;
-    overflow: auto;
+    overflow: hidden; /* 자식 요소가 넘칠 경우 스크롤 방지 */
     position: relative;
+}
+
+.page-content {
+    width: 100%; /* 부모의 크기에 맞게 */
+    height: 100%; /* 부모의 크기에 맞게 */
 }

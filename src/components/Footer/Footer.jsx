@@ -5,26 +5,48 @@ import marketIcon from '../../assets/icon/market.png';
 import group from '../../assets/icon/group.png';
 import video from '../../assets/icon/video.png';
 
-const Footer = () => {
+const footerItems = [
+    {
+        key: "tournament",
+        icon: badmintonIcon,
+        alt: "배드민턴 대회",
+        label: "배드민턴 대회",
+    },
+    {
+        key: "market",
+        icon: marketIcon,
+        alt: "플리마켓",
+        label: "플리마켓",
+    },
+    {
+        key: "group",
+        icon: group,
+        alt: "배드민턴 모임",
+        label: "배드민턴 모임",
+    },
+    {
+        key: "video",
+        icon: video,
+        alt: "배드민턴 영상",
+        label: "배드민턴 영상",
+    },
+];
+
+
+function Footer({ switchComponent }) {
     return (
         <footer>
             <div className={styles.footerContainer}>
-                <div className={styles.footerItem}>
-                    <img src={badmintonIcon} alt="배드민턴 대회" />
-                    <p>배드민턴 대회</p>
-                </div>
-                <div className={styles.footerItem}>
-                    <img src={marketIcon} alt="배드민턴 대회"/>
-                    <p>플리마켓</p>
-                </div>
-                <div className={styles.footerItem}>
-                    <img src={group} alt="배드민턴 모임"/>
-                    <p>배드민턴 모임</p>
-                </div>
-                <div className={styles.footerItem}>
-                    <img src={video} alt="아이콘1"/>
-                    <p>배드민턴 영상</p>
-                </div>
+                {footerItems.map(({key, icon, alt, label}) => (
+                    <div
+                        key={key}
+                        className={styles.footerItem}
+                        onClick={() => switchComponent(key)} // 각 key 값에 따라 토글
+                    >
+                        <img src={icon} alt={alt}/>
+                        <p>{label}</p>
+                    </div>
+                ))}
             </div>
         </footer>
 
