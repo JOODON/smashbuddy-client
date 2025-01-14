@@ -1,0 +1,42 @@
+.tournamentPage {
+  height: 80vh; /* 화면 전체 높이에 맞게 설정 */
+  overflow: auto; /* 스크롤이 필요하면 표시 */
+}
+
+.tournamentContainer {
+  padding: 5px;
+  margin: 10px;
+}
+.tournamentContainer h2{
+  margin-top: 10px;
+  color: #00A3FF;
+  font-size: 24px;
+  padding: 5px 10px;
+}
+
+.tournamentItem {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 10px 20px ;
+  border-left: 6px solid #00A3FF;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 기본 쉐도우 */
+  transition: box-shadow 0.3s, transform 0.3s; /* 애니메이션 */
+  cursor: pointer; /* 클릭 가능한 느낌 */
+  border-radius: 8px;
+}
+.tournamentItem img{
+  width: 100%; /* 이미지 너비를 부모에 맞춤 */
+  max-width: 120px; /* 최대 크기 제한 */
+  height: auto; /* 이미지 비율 유지 */
+  border-radius: 8px; /* 모서리 둥글게 */
+}
+
+.tournamentItem:hover {
+
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* 호버 상태에서 쉐도우 강화 */
+  transform: translateY(-2px); /* 살짝 올라가는 효과 */
+}
+hr{
+  border: 1px solid #bbced8;
+}
