@@ -16,6 +16,14 @@ function App() {
         setActiveComponent(componentName);
     };
 
+    function setViewportHeight() {
+        const vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
+
+    window.addEventListener('resize', setViewportHeight);
+    setViewportHeight();
+
     const componentsMap = {
         main: <Main />,
         tournament: <Tournament />,
@@ -25,8 +33,8 @@ function App() {
     };
 
     return (
-        <div className="app-container">
-            <Header switchComponent={switchComponent} />
+        <div className="app-container" >
+            <Header switchComponent={switchComponent}  />
             <motion.div
                 key={activeComponent} // 활성화된 컴포넌트의 키
 

@@ -25,10 +25,9 @@ html, body {
 
 .app-container {
     width: 100vw;  /* 100% 뷰포트 너비 */
-    height: 100vh; /* 100% 뷰포트 높이 */
+    height: calc(var(--vh, 1vh) * 100); /* 실제 뷰포트 높이 적용 */
     background-color: white;
     /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); */
-    border-radius: 15px;
     overflow: hidden; /* 자식 요소가 넘칠 경우 스크롤 방지 */
     position: relative;
 }
