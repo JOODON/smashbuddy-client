@@ -44,6 +44,48 @@
   color: #333; /* 텍스트 색상 */
   text-align: left; /* 텍스트 왼쪽 정렬 */
 }
+.videoContainer {
+  position: relative;
+  width: 100%;
+  height: 200px;
+}
+
+.videoContent {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  background: rgba(255, 255, 255, 0.69);
+  color: rgba(0, 163, 255, 0.69);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 50px;  /* Adjust width */
+  height: 50px; /* Adjust height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.hidden {
+  display: none;
+}
+
+
 
 .bestItem h2 ,
 .bestVideo h2
